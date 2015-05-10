@@ -1,0 +1,134 @@
+/* app css stylesheet */
+body {
+  background-color: #829b64;
+  color: #445729;
+}
+
+.menu {
+  list-style: none;
+  border-bottom: 0.1em solid black;
+  margin-bottom: 2em;
+  padding: 0 0 0.5em;
+}
+
+.menu:before {
+  content: "[";
+}
+
+.menu:after {
+  content: "]";
+}
+
+.menu > li {
+  display: inline;
+}
+
+.menu > li:before {
+  content: "|";
+  padding-right: 0.3em;
+}
+
+.menu > li:nth-child(1):before {
+  content: "";
+  padding: 0;
+}
+
+.stars {
+  float: left;
+  clear: left;
+  top:0;
+  width: 488px;
+  height: 100%;
+  padding: 0;
+  background-image: url('assets/images/stars_0.png');
+}
+
+.stars.s_1 {
+  background-image: url('assets/images/stars_1.png');
+}
+
+.scorebar {
+  height: 126px;
+  width: 100%;
+}
+
+.money_packet {
+  float: left;
+  height:100%;
+  width: 295px;
+  background: url('assets/images/money.png') no-repeat;
+  background-size: 126px 126px;
+}
+
+.money_amount {
+  float: left;
+  height: 100%;
+  font-size: xx-large;
+}
+
+.shelves {
+  float: left;
+  clear: left;
+}
+
+.shelf {
+  position: relative;
+  clear: both;
+  /*height: 200px;*/
+  width: 488px;
+  border: 1px solid;
+  overflow: hidden;
+}
+
+.activity_container {
+  float: right;
+  clear: right;
+  top: 126px;
+}
+
+.ghost {
+  height: 204px;
+  width: 258px;
+  background: url('assets/images/ghost_1.png') no-repeat;
+}
+
+.ghost_2 {
+  height: 185px;
+  width: 247px;
+  bottom: 0;
+  background: url('assets/images/ghost_2.png') no-repeat;
+  -webkit-animation-direction: alternate-reverse;
+}
+
+.ghost_3 {
+  height: 172px;
+  width: 210px;
+  bottom: 0;
+  background: url('assets/images/ghost_3.png') no-repeat;
+}
+
+.ghost_4 {
+  height: 204px;
+  width: 258px;
+  bottom: 0;
+  background: url('assets/images/ghost_4.png') no-repeat;
+}
+
+.idle {
+  -webkit-animation: move_idle 4s linear 0s infinite alternate, floating 2s linear 0s infinite alternate;
+  -moz-animation: move_idle 4s linear 0s infinite alternate, floating 2s linear 0s infinite alternate;
+  -o-animation: move_idle 4s linear 0s infinite alternate, floating 2s linear 0s infinite alternate;
+  animation: move_idle 4s linear 0s infinite alternate, floating 2s linear 0s infinite alternate;
+}
+
+
+
+@-webkit-keyframes move_idle { from { margin-left:0%; } to { margin-left:258px; }  }
+@-moz-keyframes move_idle { from { margin-left:0%; } to { margin-left:258px; }  }
+@-o-keyframes move_idle { from { margin-left:0%; } to { margin-left:258px; }  }
+@keyframes move_idle { from { margin-left:0%; } to { margin-left:258px; }  }
+
+@-webkit-keyframes floating { from { top:0%; } to { top: 15px}  }
+@-moz-keyframes floating { from { top:0%; } to { top: 15px}   }
+@-o-keyframes floating { from { top:0%; } to { top: 15px}   }
+@keyframes floating { from { top:0%; } to { top: 15px}  }
